@@ -1,0 +1,26 @@
+
+
+<form>
+  Gyártó: <input type="text" [(ngModel)]="manufacturer" name="manufacturer">
+  Típus: <input type="text" [(ngModel)]="type" name="type">
+  Szín: <input type="text" [(ngModel)]="color" name="color">
+  Gyártási időpont: <input type="date" [(ngModel)]="date" name="date">
+  <button (click)="save()">Mentés</button>
+  <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+  <table style="width:100%" border="1">
+      <thead>
+        <th>Gyártó</th>
+        <th>Típus</th>
+        <th>Szín</th>
+        <th>Gyártási Dátum</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of list">
+          <td align="center">{{car.manufacturer}}</td>
+          <td align="center">{{car.type}}</td>
+          <td align="center">{{car.color}}</td>
+          <td align="center">{{car.date}}</td>
+        </tr>
+      </tbody>
+    </table>
+</form>
