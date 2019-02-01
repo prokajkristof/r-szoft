@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
       car.manufacturer = this.manufacturer;
       car.type = this.type;
       car.color = this.color;
-      let latest_date = this.datePipe.transform(this.date,"yyyy-MM-dd");
+      let latest_date = this.datePipe.transform(this.date,"yyyy.MM.dd");
       car.date = latest_date;
       this.list.push(car);
       console.log(this.list);
